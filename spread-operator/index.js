@@ -20,15 +20,20 @@ const soma2 = (...values) => {
 
 
 const recebeObjeto = (...values) => {
-    console.log(values)
-    console.log(values[0].nome)
+    // console.log(values)
+    // console.log(values[0].nome)
 
     //Spread Operator com Object Destructuring
     const { nome, user } = values[0]
 
-    console.log(`Nome: ${nome}`)
-    console.log(`Username: ${user}`)
+    // console.log(`Nome: ${nome}`)
+    // console.log(`Username: ${user}`)
+
+    values.forEach((item) => {
+        console.log(item)
+    })
 
 }
 
 recebeObjeto({ nome: 'Ramon', user: 'RamonCP' })
+
