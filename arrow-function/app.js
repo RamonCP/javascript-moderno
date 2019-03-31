@@ -15,7 +15,29 @@ const pTexto = (textP) => {
     return paragraph; 
 }
 
+const button = (styles) => {
+    const botao = document.createElement('button');
+    botao.setAttribute('id', 'botao');
+    botao.style = styles;
+
+    const botaoText = document.createTextNode('Clique aqui');
+    botao.appendChild(botaoText);
+
+    return botao;
+}
+
+
 // meuNome2('Ramon')
 const hello = pTexto('Olá Mundo');
 App.insertBefore(hello, null);
 
+const botao = button();
+App.insertBefore(botao, null);
+
+
+const botaoElement = document.querySelector('#app button')
+
+botaoElement.addEventListener('click', () => {
+    botaoElement.classList.toggle('active');
+    console.log('Olá')
+})
