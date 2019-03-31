@@ -1,3 +1,5 @@
+const $root = document.querySelector('#root')
+
 const developer = {
     id: 1,
     user: 'RamonCP',
@@ -5,11 +7,29 @@ const developer = {
     learning: 'JavaScript'
 }
 
-console.log(developer.learning);
+const devElement = ({ id, user, age, learning }) => (
+    `
+    <table>
+        <thead>
+            <tr>
+                <td>Id</td>
+                <td>User</td>
+                <td>Age</td>
+                <td>Learning</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>${id}</td>
+                <td>${user}</td>
+                <td>${age}</td>
+                <td>${learning}</td>
+            </tr>
+        </tbody>
+    </table>
+    `
+);
 
-const { id, user, age, learning } = developer;
+const dev = devElement(developer)
 
-console.log(id)
-console.log(user)
-console.log(age)
-console.log(learning)
+$root.innerHTML = dev
