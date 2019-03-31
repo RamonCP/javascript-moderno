@@ -1,5 +1,8 @@
 const person = [ "Scorpion", "Sonic", "Buzz", "Mário", "Link" ];
 const newPerson = [ "Scarlet", ...person, "Kratos" ];
+
+const $root = document.querySelector('#root');
+
 // console.log(newPerson)
 
 const soma = (num1, num2, num3) => {
@@ -34,6 +37,16 @@ const recebeObjeto = (...values) => {
     })
 
 }
-
 recebeObjeto({ nome: 'Ramon', user: 'RamonCP' })
 
+const ListComponent = (...items) => {
+    const UlComponent = document.createElement('ul');
+    const LiComponents = items.map( item =>  `<li>${item}</li>` )
+
+    
+    UlComponent.innerHTML = LiComponents.join(" ")
+    return UlComponent;
+}
+
+const ListComponentReturn = ListComponent('Arroz', 'Feijão', 'Carne', 'Peixe', 'Macarrão', 'Salada de Maionese')
+$root.insertBefore(ListComponentReturn, null);
