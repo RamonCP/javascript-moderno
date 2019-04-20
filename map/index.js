@@ -4,6 +4,10 @@ const reverseNomes = nomes.map((nome) => {
     return nome.split("").reverse().join("")
 })
 
+const nomess = nomes.map((item))
 
 
-console.log(reverseNomes)
+
+
+
+console.log(nomess)
