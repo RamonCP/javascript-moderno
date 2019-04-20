@@ -8,8 +8,7 @@ const frameworks = [
     {name: "Spring", language: "Java"},
 ]
 
-const JavaScript = frameworks.filter((item)=>{
-    return item.language == "JavaScript"
-})
+//Object Destructuring com método filter
+const JavaScript = frameworks.filter( ({ language }) => language == "JavaScript" )
 
 console.log(JavaScript)
