@@ -1,2 +1,2 @@
 # javascript-moderno
-Estudos de javascript moderno
+Modern Javascript studies
