@@ -1,2 +1,2 @@
-# javascript-moderno
+# modern-javascript
 Modern Javascript studies
